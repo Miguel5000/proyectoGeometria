@@ -29,7 +29,7 @@ public class Cuadrado extends FiguraGeometrica{
 
     @Override
     public String mostrarInformacionDeEntrada() {
-        return "Este cuadrado tiene 4 lados de longitud " + this.mostrarInformacionDeEntrada();
+        return "Este cuadrado tiene 4 lados de longitud " + this.longitudLado;
     }
 
     /**
