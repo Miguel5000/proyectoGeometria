@@ -13,17 +13,24 @@ import co.edu.ucundinamarca.figurasgeometricas.Triangulo;
 import java.util.Scanner;
 
 /**
- *
- * @author Miguel
+ * Clase encargada de iniciar la aplicación
+ * @author Miguel Ángel Manrique Téllez
+ * @since 1.0.0
+ * @version 1.0.0
  */
 public class Principal {
-
+    /**
+     * Constructor que ejecuta las instrucciones iniciales de la aplicación
+     */
     public Principal() {
         
         iniciar();
         
     }
     
+    /**
+     * Método que posee la lógica principal de la aplicación
+     */
     private void iniciar(){
         
         Scanner lector = new Scanner(System.in);
@@ -66,22 +73,29 @@ public class Principal {
                 
             }
             
-            System.out.println("El área de la figura es " + figura.calcularArea());
-            System.out.println("El perímetro de la figura es " + figura.calcularPerimetro() + "\n");
+            if(figura != null){
             
-            Informacion informacion = figura;
+                System.out.println("El área de la figura es " + figura.calcularArea());
+                System.out.println("El perímetro de la figura es " + figura.calcularPerimetro() + "\n");
+
+                Informacion informacion = figura;
+
+                System.out.println("Información de entrada de la figura:");
+                System.out.println(informacion.mostrarInformacionDeEntrada() + "\n");
             
-            System.out.println("Información de entrada de la figura:");
-            System.out.println(informacion.mostrarInformacionDeEntrada() + "\n");
+            }
                 
-            System.out.println("¿Desea hacer los cálculos para otra figura?");
+            System.out.println("¿Desea hacer los cálculos para otra figura? (S/N)");
             lector.nextLine();
             respuesta = lector.nextLine();
             
         }while(respuesta.equalsIgnoreCase("S"));
         
     }
-    
+    /**
+     * Método de entrada de la aplicación
+     * @param args variable que recibe las variables de inicio de la aplicación para conectarla con operaciones del S.O como por ejemplo al abrir un archivo con esta aplicación
+     */
     public static void main(String[] args) {
      
         new Principal();

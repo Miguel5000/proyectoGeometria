@@ -6,12 +6,21 @@
 package co.edu.ucundinamarca.figurasgeometricas;
 
 /**
- *
- * @author Miguel
+ * Clase encargada de establecer la estructura que tendrán todas las figuras geométricas
+ * @author Miguel Ángel Manrique Téllez
+ * @since 1.0.0
+ * @version 1.0.0
  */
 public abstract class FiguraGeometrica implements Informacion {
-    
+    /**
+     * Retorna el área de la figura
+     * @return area
+     */
     public abstract float calcularArea();
+    /**
+     * Retorna el perímetro de la figura
+     * @return perimetro
+     */
     public abstract float calcularPerimetro();
     
 }
